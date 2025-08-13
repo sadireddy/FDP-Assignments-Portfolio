@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDP Assignments Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        /* Custom scrollbar styling for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #9ca3af;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-indigo-600">
+                    <path d="M4 14.5V20a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5.5"></path>
+                    <path d="M12 22v-8.5"></path>
+                    <path d="M16 10h2l2-2v-.5a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v.5l2 2h2v4"></path>
+                    <path d="M8 10V6.5A2.5 2.5 0 0 1 10.5 4h.5"></path>
+                    <path d="M12 14.5V10h-.5A2.5 2.5 0 0 1 9 7.5"></path>
+                </svg>
+                <span class="text-2xl font-bold text-gray-800">FDP Assignments Portfolio</span>
+            </a>
+            <div class="flex space-x-4">
+                <a href="index.html" class="text-gray-600 hover:text-indigo-600 transition-colors font-medium">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-indigo-600 transition-colors font-medium">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-8">Assignments</h1>
+        
+        <div id="assignments-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Assignment cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-4 shadow-inner mt-12">
+        <div class="container mx-auto px-6 text-center text-gray-600">
+            &copy; 2025 Swapandeep Kaur. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Use a simple object to hold all assignment data
+        const assignmentsData = [
+            { 
+                id: 'cs1', 
+                title: 'CS 1: Google Sheet and App Scripts', 
+                snippet: 'This activity provided practical hands-on experience with Google Sheets and Google Apps Script, automating score processing and data analysis for educators.',
+                pageTitle: 'CS 1: Google Sheet and App Scripts',
+                content: `
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Activity Report: Student Score Processing Using Google Apps Script</h2>
+                    <p class="text-gray-600 mb-6">**Google Sheet Link:** [Insert your Google Sheet link here]</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Summary of the Activity</h3>
+                    <p class="text-gray-600 mb-4">In this activity, a Google Apps Script was developed and deployed to automate the process of analyzing student performance data stored in Google Sheets. The key features of the script include:</p>
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-600">
+                        <li>Automatically detecting the range of student scores (Columns C to G).</li>
+                        <li>Calculating the <strong>Total</strong> and <strong>Average</strong> for each student.</li>
+                        <li>Flagging students who scored <strong>below the class average</strong>.</li>
+                        <li>Visually highlighting:
+                            <ul class="list-circle list-inside ml-4 space-y-1">
+                                <li>Scores <strong>below 40</strong> in <strong class="text-red-500">red</strong>.</li>
+                                <li>Scores <strong>above 80</strong> in <strong class="text-green-500">green</strong>.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="text-gray-600 mb-6">The script also dynamically adjusted to the number of students (rows) and ensured that headers were labeled correctly.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Reflection</h3>
+                    <p class="text-gray-600 mb-4">This activity provided practical hands-on experience with:</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-600">
+                        <li>Google Sheets and its structure</li>
+                        <li>Writing and debugging Google Apps Script (JavaScript-based)</li>
+                        <li>Automating repetitive tasks</li>
+                        <li>Applying conditional formatting programmatically</li>
+                        <li>Improving data readability and analysis for educators</li>
+                    </ul>
+                    <p class="text-gray-600 mt-4">Overall, this was a valuable and insightful learning experience in combining programming with productivity tools like Google Sheets.</p>
+                `,
+            },
+            { 
+                id: 'cs5', 
+                title: 'CS 5: What Students Know', 
+                snippet: 'This document explores threshold concepts in Artificial Intelligence, principles of heuristics, and presents a case study for "The Great Food Hunt in a New City".',
+                pageTitle: 'CS 5: What Students Know',
+                content: `
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Threshold Concepts for an AI Course</h2>
+                    <ul class="list-disc list-inside space-y-1 mb-6 text-gray-600">
+                        <li>Search as Problem-Solving</li>
+                        <li>State Space Representation</li>
+                        <li>Heuristics and Informed Search</li>
+                        <li>Adversarial Search (Minimax, Alpha-Beta Pruning)</li>
+                        <li>Knowledge Representation and Reasoning</li>
+                        <li>Logical Inference</li>
+                        <li>...and many more</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Case Study: "The Great Food Hunt in a New City"</h2>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Background Story</h3>
+                    <p class="text-gray-600 mb-4">You and your friends are visiting a new city for a tech fest. It’s late in the evening, and everyone is hungry. The group wants to find the <strong>best</strong> food place that is both <strong>affordable</strong> and <strong>highly rated</strong> — but the city is huge, and you have limited time before restaurants close.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Student’s Task</h3>
+                    <p class="text-gray-600 mb-4">You need to decide which restaurant to go to and how to get there as efficiently as possible.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Integration of Principles</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-600">
+                        <li><strong>Determining Heuristics:</strong> Students decide what “clues” they will use (e.g., shortest walking distance, highest rating, combo of both).</li>
+                        <li><strong>Admissibility:</strong> They ensure their clues never underestimate the time it would take.</li>
+                        <li><strong>Search Aspects:</strong> Discuss what information is worth considering (distance, rating, closing time) and what can be ignored.</li>
+                        <li><strong>Optimality:</strong> Identify whether the chosen path ensures they find the best restaurant possible given constraints.</li>
+                    </ul>
+                `,
+            },
+            {
+                id: 'cs6',
+                title: 'CS 6: Research using AI',
+                snippet: 'This document outlines research on a "Real-time Speech-based Intoxication Detection System" using vowel biomarker analysis and artificial neural networks, reflecting on new papers and search directions.',
+                pageTitle: 'CS 6: Research using AI',
+                content: `
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Real-time Speech-based Intoxication Detection System</h2>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Vowel Biomarker Analysis with Artificial Neural Networks</h3>
+                    <p class="text-gray-600 mb-4">This research focuses on using artificial neural networks to detect intoxication based on changes in vowel biomarkers. It explores several new papers to refine the approach.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Reflection</h3>
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-600">
+                        <li><strong>Focus shift from single-feature to vowel-space and speaker-specific analyses:</strong> New papers suggest looking at global vowel-space changes rather than just isolated formant metrics.</li>
+                        <li><strong>Speaker-dependence matters:</strong> Research indicates that vowel compactness is a stable, speaker-specific trait, which points toward including speaker-adaptive models.</li>
+                        <li><strong>Datasets and reproducibility:</strong> Public datasets like the Alcohol Language Corpus can strengthen evaluation and benchmark performance.</li>
+                        <li><strong>New search directions:</strong> Broaden the literature search to include vowel-space metrics, speaker-normalization techniques, and multimodal approaches.</li>
+                    </ul>
+                `,
+            },
+            {
+                id: 'cs7',
+                title: 'CS 7: Doing vs. Learning Through a Project',
+                snippet: 'A reflection on the two distinct approaches students take to projects: the task-focused "Doing a Project" and the comprehension-focused "Learning Through a Project."',
+                pageTitle: 'CS 7: What\'s your thought: "doing a project" and "learning through a project"',
+                content: `
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">"Doing a Project" vs. "Learning Through a Project"</h2>
+                    <p class="text-gray-600 mb-4">In engineering education, projects are gateways to deeper understanding. Over the years, I’ve observed two distinct approaches students take:</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Doing a Project</h3>
+                    <p class="text-gray-600 mb-4">This is often task-focused. Students aim to meet requirements and "get it done." The focus sometimes drifts towards completion rather than comprehension. The outcome may look polished, but the process may not have built strong conceptual foundations.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Learning Through a Project</h3>
+                    <p class="text-gray-600 mb-4">This is a mindset shift where the project is a <strong>means</strong> to explore, question, experiment, and apply knowledge. Students dig into <strong>why</strong> something works, not just how to make it work. The learning is active, hands-on, and often sticks for a lifetime because it is tied to real-world problem-solving.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Why Learning Through a Project Matters</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-600">
+                        <li>It develops critical thinking and the ability to troubleshoot under uncertainty.</li>
+                        <li>It encourages interdisciplinary connections, mirroring industry practice.</li>
+                        <li>It builds resilience, because mistakes are treated as learning opportunities.</li>
+                        <li>It fosters creativity and innovation, as students often go beyond the initial brief.</li>
+                    </ul>
+                    <p class="text-gray-600 mt-4">In short, <strong>doing a project</strong> can help you pass a course, but <strong>learning through a project</strong> can prepare you for a career.</p>
+                `,
+            },
+            {
+                id: 'cs8',
+                title: 'CS 8: Tell a Learning Story Using Kolb\'s Cycle',
+                snippet: 'A learning story titled "A Misunderstood Message" that follows Kolb\'s Experiential Learning Cycle, detailing a communication breakdown and the lessons learned.',
+                pageTitle: 'CS 8: Tell a Learning Story Using Kolb\'s Cycle',
+                content: `
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Learning Story: "A Misunderstood Message"</h2>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">1. Concrete Experience (What happened?)</h3>
+                    <p class="text-gray-600 mb-4">One evening, I quickly replied to my friend’s message without thinking much. I used short, blunt words because I was busy, but my friend took it as me being angry. I didn’t notice at the time, but over the next few days, the communication reduced, and there was a gap in our friendship.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">2. Reflective Observation (What did you notice?)</h3>
+                    <p class="text-gray-600 mb-4">I started noticing that my friend was not responding with the same warmth. When I looked back at the conversation, I realized my tone might have sounded rude in text form. I remembered that messages without expressions or voice can easily be misunderstood.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">3. Abstract Conceptualization (What did you learn?)</h3>
+                    <p class="text-gray-600 mb-4">I learned that communication is not just about the words we use—it’s also about the tone, timing, and clarity. In text messages, especially, it’s important to be careful with how we phrase things, maybe even add context or emojis to convey feelings better. I also understood that clarifying quickly can prevent small misunderstandings from growing into bigger issues.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">4. Active Experimentation (What will you do next?)</h3>
+                    <p class="text-gray-600">Next time, I will avoid sending rushed replies when I’m busy. I will take a moment to check my tone and, if something could be misunderstood, I’ll add a few extra words to explain. If I sense any confusion, I’ll talk directly to the person—because one open conversation is better than weeks of silence.</p>
+                `,
+            },
+            {
+                id: 'minimax',
+                title: 'Minimax Lesson Plan',
+                snippet: 'A one-hour lesson plan for an undergraduate Artificial Intelligence course on the Minimax algorithm, covering theory, a walkthrough, and a hands-on coding demo.',
+                pageTitle: 'Minimax Lesson Plan',
+                content: `
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Lesson Plan: Minimax Algorithm in Artificial Intelligence</h2>
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-600">
+                        <li><strong>Duration:</strong> 1 Hour</li>
+                        <li><strong>Topic:</strong> Minimax Algorithm</li>
+                        <li><strong>Course:</strong> Artificial Intelligence</li>
+                        <li><strong>Level:</strong> Undergraduate</li>
+                        <li><strong>Mode:</strong> Lecture + Interactive Demonstration</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Learning Objectives</h3>
+                    <p class="text-gray-600 mb-4">By the end of the session, students will be able to:</p>
+                    <ul class="list-decimal list-inside space-y-1 text-gray-600">
+                        <li>Explain the concept of the Minimax algorithm.</li>
+                        <li>Construct a game tree and apply the algorithm.</li>
+                        <li>Understand the role of utility values and decision rules.</li>
+                        <li>Implement a simple Minimax algorithm.</li>
+                        <li>Identify its limitations and improvements.</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-4">Lesson Breakdown Highlights</h3>
+                    <p class="text-gray-600 mb-2">The lesson plan includes:</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-600">
+                        <li>A quick recap of adversarial search and real-world examples.</li>
+                        <li>A step-by-step manual walkthrough of Minimax on a game tree.</li>
+                        <li>A hands-on coding demo of a basic Python implementation for Tic-Tac-Toe.</li>
+                        <li>A discussion on limitations and a brief introduction to alpha-beta pruning.</li>
+                        <li>An exit ticket with key questions to assess understanding.</li>
+                    </ul>
+                `,
+            },
+            {
+                id: 'exit-ticket',
+                title: 'Exit Ticket',
+                snippet: 'An analysis of student responses from an exit ticket, providing AI-generated insights on student understanding and engagement, with a suggestion for a new classroom activity.',
+                pageTitle: 'Exit Ticket Analysis',
+                content: `
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Key Takeaways from Students</h2>
+                    <p class="text-gray-600 mb-4">Students were able to recall core AI topics like "Knowledge-Based Systems" and "Wumpus World Problem," though some responses were vague.</p>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Understanding & Engagement</h3>
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-600">
+                        <li>Most students reported a "Somewhat well" or "Neutral" understanding, indicating room for deeper clarity.</li>
+                        <li>Engagement ratings showed a positive response from 60% of students, but one student was significantly under-engaged.</li>
+                        <li>The lack of questions could mean the session was clear, or that students were hesitant to ask.</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">AI-Generated Insights</h3>
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-600">
+                        <li><strong>Concept Recall is Present, But Surface-Level:</strong> Students remember topic names, but detailed understanding isn't evident.</li>
+                        <li><strong>Engagement Polarization:</strong> Some students were fully engaged, while at least one was under-engaged.</li>
+                        <li><strong>Low Questioning = Passive Learning Risk:</strong> Lack of questions may reflect either effective clarity or low psychological safety to admit confusion.</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">One Change You’ll Make in Your Next Class</h3>
+                    <p class="text-gray-600">Incorporate a 5-minute Think-Pair-Share activity at the end of the session to deepen understanding, encourage peer interaction, and naturally surface questions.</p>
+                `,
+            },
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const listContainer = document.getElementById('assignments-list');
+            
+            // Function to generate and append cards
+            const renderCards = () => {
+                listContainer.innerHTML = ''; // Clear existing content
+                assignmentsData.forEach(assignment => {
+                    const card = document.createElement('a');
+                    card.href = `assignment.html?id=${assignment.id}`;
+                    card.className = 'block bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1';
+                    card.innerHTML = `
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-gray-800 mb-2">${assignment.title}</h2>
+                            <p class="text-gray-600 text-sm">${assignment.snippet}</p>
+                        </div>
+                    `;
+                    listContainer.appendChild(card);
+                });
+            };
+
+            // Call the function on page load
+            renderCards();
+        });
+    </script>
+</body>
+</html>

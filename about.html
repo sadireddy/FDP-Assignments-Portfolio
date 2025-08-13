@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - FDP Assignments Portfolio</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for consistent typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the body and scrollbar */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e5e7eb;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #9ca3af;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header for navigation, consistent across all pages -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-indigo-600">
+                    <path d="M4 14.5V20a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5.5"></path>
+                    <path d="M12 22v-8.5"></path>
+                    <path d="M16 10h2l2-2v-.5a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v.5l2 2h2v4"></path>
+                    <path d="M8 10V6.5A2.5 2.5 0 0 1 10.5 4h.5"></path>
+                    <path d="M12 14.5V10h-.5A2.5 2.5 0 0 1 9 7.5"></path>
+                </svg>
+                <span class="text-2xl font-bold text-gray-800">FDP Assignments Portfolio</span>
+            </a>
+            <div class="flex space-x-4">
+                <a href="index.html" class="text-gray-600 hover:text-indigo-600 transition-colors font-medium">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-indigo-600 transition-colors font-medium">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content area for the About page -->
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <div class="bg-white rounded-lg shadow-md p-8">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-6 text-center">About This Portfolio</h1>
+            <p class="text-lg text-gray-600 mb-4">
+                This portfolio serves as a comprehensive collection of my assignments completed as part of a Faculty Development Program (FDP). Each assignment is a hands-on exploration of a specific concept, demonstrating my practical understanding and application of key principles in the field.
+            </p>
+            <p class="text-lg text-gray-600 mb-4">
+                The purpose of this collection is to showcase my learning journey and the tangible outcomes of my engagement with the course material. It includes projects, case studies, and reflections that highlight my ability to apply theoretical knowledge to real-world scenarios.
+            </p>
+            <p class="text-lg text-gray-600 mb-4">
+                This website is structured to allow easy navigation through each assignment, providing a clear overview of the problem, the solution, and a personal reflection on the learning experience.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer, consistent across all pages -->
+    <footer class="bg-white py-4 shadow-inner mt-12">
+        <div class="container mx-auto px-6 text-center text-gray-600">
+            &copy; 2025 Swapandeep Kaur. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
